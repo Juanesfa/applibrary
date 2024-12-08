@@ -1,0 +1,35 @@
+.list-books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-radius: 12px;
+}
+
+.item {
+    flex: 1 1 calc(33.33% - 25px); /* 3 items por fila */
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.item::before {
+    content: "📚";
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
